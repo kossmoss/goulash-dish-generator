@@ -31,3 +31,6 @@ chmod +x ./database/init/load_dump.sh && ./database/init/load_dump.sh
 php artisan migrate
 ```
 
+### Метод API для формирования меню по заданному шаблону рецепта 
+
+https://goulash.local:1443/api/menu/pizza?recipe=DCII

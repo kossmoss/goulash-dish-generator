@@ -9,7 +9,7 @@ class PizzaFactory extends DishFactory
     public function ingredientTypeMinAmount($ingredientTypeCode): int
     {
         return match($ingredientTypeCode) {
-            IngredientType::CODE_DOUGH, IngredientType::CODE_CHEESE => -1,
+            IngredientType::CODE_DOUGH, IngredientType::CODE_CHEESE => 1,
             default => 0,
         };
     }

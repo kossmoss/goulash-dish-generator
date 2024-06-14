@@ -26,11 +26,20 @@ docker-compose run php bash
 ### Инициализация приложения в консоли PHP
 ```
 composer install
-php artisan key:generate 
-chmod +x ./database/init/load_dump.sh && ./database/init/load_dump.sh
-php artisan migrate
+php artisan key:generate
 ```
 
-### Метод API для формирования меню по заданному шаблону рецепта 
+### Загрузка дампа в БД:
+```
+chmod +x ./database/init/load_dump.sh && ./database/init/load_dump.sh
+```
+
+### Метод API для формирования меню пиццы по заданному шаблону рецепта 
 
 https://goulash.local:1443/api/menu/pizza?recipe=DCII
+
+#### Альтернативно, то же самое меню можно вывести через консольную команду:
+
+```
+php artisan app:menu pizza dcii
+```
